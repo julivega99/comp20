@@ -1,8 +1,32 @@
 <html>
   <head>
   	<title>Homework 2: On the Road to Everest - Contact </title>
+  	<link href="./styles.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
-  	Contact Us
+
+  <body class="home">
+  	<h1> On the Road to Everest ... </h1>
+
+    <div class="tab">
+      <button class="tablinks" onclick="location.href='index.html'">Home</button>
+      <button class="tablinks" onclick="location.href='services.html'">Services</button>
+      <button class="tablinks" onclick="location.href='contact.html'">Contact Us</button>
+    </div>
+
+  	<div class="container">
+      <form action="action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="email">Email</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." 
+                  style="height:200px"></textarea>
+        <input type="submit" value="Submit" >
+      </form>
+    </div>
+
   </body>
 </html>
