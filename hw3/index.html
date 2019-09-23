@@ -3,12 +3,6 @@
   <head>
   	<title>Homework 3: Web Page </title>
     <style>
-
-      body,html {
-        padding: 0; 
-        margin: 0
-      }
-
       header h1 { 
         text-align:center;
         font-family: cursive, helvetica;
@@ -23,14 +17,17 @@
         box-sizing: border-box;
       }
         
-      nav { 
+      .navE { 
         background-color: #FF80FF; 
         padding: 15px 0;
+        width: 100%;
         text-align: center;
-        overflow: hidden;
+        display: inline-block;
+        white-space:nowrap;
+
       }
 
-      nav a {
+      .navA {
         color: #000; 
         font-size: 25px; 
         text-decoration: none;
@@ -119,12 +116,12 @@
     <header>
       <h1>Header</h1>
     </header>
-    <nav>
+    <nav class="navE">
       <ul >
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">OUR TEAM</a></li>
-        <li><a href="#">PROJECTS</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a class="navA" href="#">HOME</a></li>
+        <li><a class="navA" href="#">OUR TEAM</a></li>
+        <li><a class="navA" href="#">PROJECTS</a></li>
+        <li><a class="navA" href="#">CONTACT</a></li>
         <li>
           <form>
             <input type='text' name='search'>
