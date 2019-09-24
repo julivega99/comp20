@@ -54,6 +54,7 @@
       body {
         background-color: #A8A8A8;
         height: 100%;
+        width: 100%;
       }
       #wrapper {
         min-height: 100%;
@@ -64,12 +65,15 @@
 
       #container {
         width: 100%;
+        max-width: 100%;
         margin: auto;
-        padding: 20px
+        padding: 20px;
+        display:flex;
       }
 
       #first {
-        width: 77%;
+        max-width: 77%;
+        min-width: 75%;
         float: left;
         max-height: 100%;
         background-color: #ffff;
@@ -79,7 +83,8 @@
         white-space: normal;
       }
       #second {
-        width: 20%;
+        max-width: 20%;
+        min-width: 17%;
         float: left;
         height: 560px;
         background-color: #FF80FF;
