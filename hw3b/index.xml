@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/css" href="styleSheet.css"?> 
+<setList> 
+    <heading> Lover Fest Setlist </heading> 
+    <song> 
+        <title> ME! </title> 
+        <album> Lover </album> 
+        <year> 2019 </year> 
+        <genre> Pop </genre> 
+         
+    </song> 
+    <song> 
+        <title> Style </title> 
+        <album> 1989 </album> 
+        <year> 2014 </year> 
+        <genre> Synth-Pop </genre> 
+         
+    </song> 
+    <song> 
+        <title> Paper Rings </title> 
+        <album> Lover </album> 
+        <year> 2019 </year> 
+        <genre> Pop </genre> 
+        
+    </song> 
+    <song> 
+        <title> Holy Ground </title> 
+        <album> RED </album> 
+        <year> 2012 </year> 
+        <genre> Country Pop </genre> 
+    </song> 
+    <song> 
+        <title> Picture to Burn </title> 
+        <album> Taylor Swift </album> 
+        <year> 2016 </year> 
+        <genre> Country </genre> 
+    </song> 
+    <song> 
+        <title> Long Live </title> 
+        <album> Speak Now </album> 
+        <year> 2010 </year> 
+        <genre> Pop Rock </genre> 
+    </song> 
+    <song> 
+        <title> Cruel Summer </title> 
+        <album> Lover </album> 
+        <year> 2019 </year> 
+        <genre> Pop </genre> 
+    </song> 
+    <song> 
+        <title> All Too Well </title> 
+        <album> RED </album> 
+        <year> 2012 </year> 
+        <genre> Country Pop </genre> 
+    </song> 
+    <song> 
+        <title> Fearless </title> 
+        <album> Fearless </album> 
+        <year> 2008 </year> 
+        <genre> Country </genre> 
+    </song> 
+    <song> 
+        <title> Delicate </title> 
+        <album> Reputation </album> 
+        <year> 2017 </year> 
+        <genre> Pop </genre> 
+    </song> 
+    <song> 
+        <title> We are Never Getting Back Together </title> 
+        <album> RED </album> 
+        <year> 2012 </year> 
+        <genre> Country Pop </genre> 
+    </song> 
+    <song> 
+        <title> You Belong With Me / Love Story</title> 
+        <album> Fearless </album> 
+        <year> 2008 </year> 
+        <genre> Country </genre> 
+    </song> 
+    <song> 
+        <title> Lover </title> 
+        <album> Lover </album> 
+        <year> 2019 </year> 
+        <genre> Pop </genre> 
+    </song> 
+</setList>

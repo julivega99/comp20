@@ -1,0 +1,26 @@
+setList { 
+     background-image: url(https://wallpapercave.com/wp/wp4641111.jpg);
+     width: 100%;
+     text-align: center;
+     background-attachment: fixed;
+     color: #592961;
+     padding-bottom: 30px;
+} 
+heading { 
+     color: #50155A; 
+     font-size : 40px; 
+     background-color : rgb(255, 185, 236, .5); 
+     margin: 30px;
+     font-weight : bold; 
+     padding: 5px;
+
+} 
+ heading, title, album, year, genre { 
+     display : block; 
+} 
+ title { 
+     font-size : 25px; 
+     font-weight : bold; 
+     padding-top: 25px;
+} 
+
