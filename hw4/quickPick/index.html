@@ -1,45 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quick Pick</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title> JS Quick Pick </title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
   </head>
-  <body onload="fetchIssues()">
-    <div class="container">
-      <h1> Quick Pick</h1>
-      <div class="jumbotron">
-        <h3>Add New Issue:</h3>
-        <form id="issueInputForm">
-          <div class="form-group">
-            <label for="issueDescInput">Description</label>
-            <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue ...">
-          </div>
-          <button type="submit" class="btn btn-primary">Add</button>
-        </form>
+
+  <body>
+    <div class="numbers">
+    The winning numbers are: </br>
+      <div class="array" id="num_key" >
+          <span class="array_item" id="n1" ></span>
+          <span class="array_item" id="n2" ></span>
+          <span class="array_item" id="n3" ></span>
+          <span class="array_item" id="n4" ></span>
+          <span class="array_item" id="n5" ></span>
+          <span class="array_item lucky" id="n6"></span>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div id="issuesList">
-          </div>
-        </div>
-      </div>
-      <div class="footer">
-        <p>&copy JAV 2019 </p>
+      <div class="array" id="num_key" >
+          <span class="array_item" id="sn1" ></span>
+          <span class="array_item" id="sn2" ></span>
+          <span class="array_item" id="sn3" ></span>
+          <span class="array_item" id="sn4" ></span>
+          <span class="array_item" id="sn5" ></span>
+          <span class="array_item lucky" id="sn6"></span>
+
       </div>
     </div>
-   
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-    </script>
-    <script src="http://chancejs.com/chance.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-    crossorigin="anonymous">
-    </script>
-    <script src="main.js">
-    </script>
+
+    <div class="container" id="myForm">
+      <input class="box" type="text" id="normNums" 
+             placeholder="Enter 5 Ascending Numbers Separated by Spaces" > </br>
+      <input class="box" type="text" id="luckyNum" 
+             placeholder="Enter 1 Lucky Number" > </br>
+      <input onclick="parseInput()" type="submit" value="Check Prize!" id=sumbit>
+    </div>
+
+    <div class= "numbers" id="won"> </div> 
+
+    <div class= "tryAgain">
+      <input onclick="resetInput()" type="submit" value="Try Again!">
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>    
   </body>
+
+

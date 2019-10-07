@@ -1,0 +1,52 @@
+.numbers {
+	text-align: center;
+	color: #AF63E8;
+	margin-top: 80px;
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+.container {
+	width: 60%;
+	background-color: #DFCBEE;
+	text-align: center;
+	margin: auto;
+	padding: 30px;
+	border-radius: 15px;
+	font-size: 20px;
+}
+
+.box {
+	margin-bottom: 20px;
+	font-size: 20px;
+	width: 80%;
+}
+
+.array_item {
+	font-size: 70px;
+
+}
+.lucky {
+	background-color: #F9FFA2;
+}
+
+input[type=submit] {
+  background-color: #F2F2F2;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #A4A4A4;
+}
+
+.tryAgain {
+    width: 60%;
+	text-align: center;
+	margin: auto;
+	padding: 50px;
+	border-radius: 15px;
+	font-size: 20px;
+}
+

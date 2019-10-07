@@ -1,83 +1,135 @@
-function fetchIssues () {
-  var issues = JSON.parse(localStorage.getItem('issues'));
-  var issuesList = document.getElementById('issuesList');
+
+// Displaying the lotery numbers
+
+var luckyArray = new Array();
+fiveLuckyNumbers();
+
+function fiveLuckyNumbers () {
   
-  issuesList.innerHTML = '';
-  
-  for (var i = 0; i < issues.length; i++) {
-    var id = issues[i].id;
-    var desc = issues[i].description;
-    var severity = issues[i].severity;
-    var assignedTo = issues[i].assignedTo;
-    var status = issues[i].status;
-    
-    issuesList.innerHTML +=   '<div class="well">'+
-                              '<h6>Issue ID: ' + id + '</h6>'+
-                              '<p><span class="label label-info">' + status + '</span></p>'+
-                              '<h3>' + desc + '</h3>'+
-                              '<p><span class="glyphicon glyphicon-time"></span> ' + severity + ' '+
-                              '<span class="glyphicon glyphicon-user"></span> ' + assignedTo + '</p>'+
-                              '<a href="#" class="btn btn-warning" onclick="setStatusClosed(\''+id+'\')">Close</a> '+
-                              '<a href="#" class="btn btn-danger" onclick="deleteIssue(\''+id+'\')">Delete</a>'+
-                              '</div>';
+  for (var i = 0; i < 5; i++) {
+    var min = 1; 
+    var max = 48;
+    var random = Math.random() * (+max - +min) +min; 
+    random = Math.trunc(random);
+    luckyArray[i] = random;
+  }
+
+  min = 1;
+  max = 18
+  random = Math.trunc(Math.random() * (+max - +min) +min); 
+  luckyArray[5] = random;
+
+  displayArray(luckyArray);
+  sortArray(luckyArray);
+  displaySArray(luckyArray);
+
+}
+
+function displayArray(array) {
+  for (i = 0; i < 6; i++) {
+    document.getElementById('n' + (i + 1)).innerHTML = array[i];
   }
 }
 
-function saveIssue(e) {
-  var issueId = chance.guid();
-  var issueDesc = document.getElementById('issueDescInput').value;
-  var issueSeverity = document.getElementById('issueSeverityInput').value;
-  var issueAssignedTo = document.getElementById('issueAssignedToInput').value;
-  var issueStatus = 'Open';
-  var issue = {
-    id: issueId,
-    description: issueDesc,
-    severity: issueSeverity,
-    assignedTo: issueAssignedTo,
-    status: issueStatus
+
+function sortArray(array) {
+  var sortedArray = new Array();
+  var lucky = array[5];
+  for (i = 0; i < 5; i++) {
+    sortedArray[i] = array[i];
   }
-  
-  if (localStorage.getItem('issues') === null) {
-    var issues = [];
-    issues.push(issue);
-    localStorage.setItem('issues', JSON.stringify(issues));
-  } else {
-    var issues = JSON.parse(localStorage.getItem('issues'));
-    issues.push(issue);
-    localStorage.setItem('issues', JSON.stringify(issues));
-  }
-  
-  document.getElementById('issueInputForm').reset();
- 
-  fetchIssues();
-  
-  e.preventDefault(); 
+  sortedArray.sort(function(a, b){return a-b});
+  sortedArray[5] = lucky;
+  luckyArray = sortedArray;
+  return sortedArray;
 }
 
-function setStatusClosed (id) {
-  var issues = JSON.parse(localStorage.getItem('issues'));
-  
-  for(var i = 0; i < issues.length; i++) {
-    if (issues[i].id == id) {
-      issues[i].status = "Closed";
+function displaySArray(array) {
+  for (i = 0; i < 6; i++) {
+    document.getElementById('sn' + (i + 1)).innerHTML = array[i];
+  }
+}
+
+// Parsing the input
+
+function parseInput() {
+    var inputLucky = parseInt(document.getElementById('luckyNum').value);
+    var inputArray = (document.getElementById('normNums').value).split(" ");
+    for (i = 0; i < 5; i++ ){
+      inputArray[i] = parseInt(inputArray[i]);
     }
-  }
-    
-  localStorage.setItem('issues', JSON.stringify(issues));
-  
-  fetchIssues();
+    var winningMessage = match(inputArray, inputLucky);
+    document.getElementById('won').innerHTML = winningMessage;
+
+}
+function match (inputArray, inputLucky) {
+   var lucky = luckyBall(luckyArray[5], inputLucky);
+   var numMatches = findMatches(inputArray);
+
+   if (numMatches == 5) {
+     if (lucky) {
+        return ("You win $7,000 a week for LIFE!");
+      } else {
+        return ("You win $25,000 a year for LIFE!");
+      }
+   } else if (numMatches == 4) {
+      if (lucky) {
+        return ("You win $5,000");
+      } else {
+        return ("You win $200");
+      }
+   } else if (numMatches == 3) {
+      if (lucky) {
+        return ("You win $150");
+      } else {
+        return ("You win $20");
+      }
+   } else if (numMatches == 2) {
+      if (lucky) {
+        return ("You win $25");
+      } else {
+        return ("You win $3");
+      }
+   } else if ((numMatches == 1) && lucky) {
+      return ("You win $6");
+   } else if (lucky ) {
+      return ("You win $4");
+   } else {
+      return ("No Luck for You :(");
+   }
 }
 
-function deleteIssue (id) {
-  var issues = JSON.parse(localStorage.getItem('issues'));
+function luckyBall(lucky, input) {
   
-  for(var i = 0; i < issues.length; i++) {
-    if (issues[i].id == id) {
-      issues.splice(i, 1);
+    if (lucky == input) {
+      return true;
     }
-  }
-  
-  localStorage.setItem('issues', JSON.stringify(issues));
-  
-  fetchIssues();
+
+    return false;
 }
+
+function findMatches (inputArray) {
+
+    var num = 0;
+
+    for (var i = 0; i < 5; i++) {
+      if ( inputArray[i] == luckyArray[i]){
+        num++;
+      }
+    }
+
+    return num;
+}
+
+
+// Resetting Input
+
+function resetInput () {
+  document.getElementById("normNums").value = "";
+  document.getElementById("luckyNum").value = "";
+  document.getElementById('won').innerHTML = "";
+}
+
+
+
+
