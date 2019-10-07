@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> JS Joe's Hot Dots </title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+  </head>
+</html>
+
+<body>
+
+  <h1> &#127789; Joe's Hot Dogs &#127789; </h1>
+
+  <h2> Please Place Your Order </h2>
+
+  <div class="container">
+    <form class="coolForm">
+      <label for="numHD"> Hotdogs </label>
+      <input class= "box" type="text" id="numHD"  value="0"> </br>
+      <label for="numFF">French Fries</label>
+      <input class= "box" type="text" id="numFF"  value="0"> </br>
+      <label for="numD">Drinks</label>
+      <input class= "box" type="text" id="numD"  value="0"> </br>
+    </form>
+
+    <div class="button">
+      <input class="button" onClick="order()" type="submit" value="Order" id=sumbit>
+    </div>
+  </div>
+
+  <div class="finalOrder">
+    <div class= "order" id="finalOrder"> </div>
+    <div class= "itemsOrdered" id="HD"> </div>
+    <div class= "itemsOrdered" id="FF"> </div>
+    <div class= "itemsOrdered" id="D"> </div>
+
+    <div class= "money" id="subtotal"> </div>
+    <div class= "money" id="discount"> </div>
+    <div class= "money" id="tax"> </div>
+    <div class= "Total" id="total"> </div>
+  </div>
+
+  <script type="text/javascript" src="main.js"></script>  
+</body>

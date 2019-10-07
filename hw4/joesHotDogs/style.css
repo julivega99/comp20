@@ -1,0 +1,88 @@
+body {
+    font-family: 'Mansalva';
+}
+h1 {
+    text-align: center;
+    color: #D10000;
+    background-color: #FFC300;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    width: 60%;
+    background-color: rgb(255,195,0, 0.5);
+    text-align: right;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.coolForm {
+    width: 70%;
+    margin-right: 20%;
+}
+
+.box {
+    margin-bottom: 20px;
+    font-size: 18px;
+    width: 40%;
+    text-align: center;
+}
+
+.button {
+    font-family: 'Mansalva' !important;
+    text-align: right;
+    margin-right: 10%;
+    font-size: 20px;
+}
+
+input[type=submit] {
+  text-align: right;
+  background-color: #F2F2F2;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #A4A4A4;
+}
+
+.finalOrder {
+
+    width: 60%;
+    background-color: rgb(255,195,0, 0.5);
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #D10000;
+
+}
+
+.order {
+
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.itemsOrdered{
+    padding-top: 10px;
+}
+
+.money {
+    text-align: left;
+    margin-left: 20%;
+    padding-top: 10px;
+}
+
+.Total {
+    padding-top: 10px;
+}
