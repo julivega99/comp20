@@ -3,30 +3,32 @@
   <head>
     <title> JS HW 4a </title>
     <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Turret+Road&display=swap" 
+    rel="stylesheet">
   </head>
 
   <h1> Amicable Numbers </h1>
   <body>
     <div class="container">
-      <form>
+      <form class="coolForm">
         <label for="firstNum"> First Number </label>
         <input class= "box" type="text" id="firstNum"  value="0"> </br>
         <label for="secondNum">Second Number</label>
         <input class= "box" type="text" id="secondNum"  value="0"> </br>
       </form>
 
-      <div class="button">
+      <div class="b">
         <input class="button" onClick="parseNumbers()" type="submit" value="Check!" 
                 id=sumbit>
       </div>
     </div>
 
     <h3> 
-      <div class="answers">
-        <div id="firstFactors"></div>
-        <div id="secondFactors"></div>
-        <div id="intro"></div>
-        <div id="amicable"> </div>
+      <div>
+        <div class="answers" id="firstFactors"></div>
+        <div class="answers" id="secondFactors"></div>
+        <div class="answers" id="intro"></div>
+        <div class="answers" id="amicable"> </div>
       </div>
     </h3>
   <script type="text/javascript" src="main.js"></script>  

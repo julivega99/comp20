@@ -1,0 +1,48 @@
+body {
+  font-family: 'Turret Road';
+}
+h1, h3 {
+	color: #030D7E;
+	text-align: center;
+}
+
+.answers {
+	color: #030D7E;
+	text-align: center;
+  padding-bottom: 8px;
+}
+
+.container {
+	width: 60%;
+	background-color: rgb(3, 13, 126, 0.4);
+  text-align: right;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.coolForm {
+  width: 70%;
+  margin-right: 20%;
+}
+
+.b {
+	text-align: right;
+}
+
+.button {
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Turret Road' !important;
+  width: 30%;
+  text-align: center;
+}
+
+.box {
+	border-radius: 5px;
+	margin-bottom: 20px;
+  font-size: 18px;
+  width: 40%;
+  text-align: center;
+}
