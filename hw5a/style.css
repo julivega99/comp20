@@ -1,5 +1,5 @@
 body {
-  font-family: 'Turret Road', 'Shadows Into Light';
+  font-family: 'Turret Road'
 }
 h1, h3 {
 	color: #030D7E;
@@ -34,7 +34,7 @@ h1, h3 {
 .button {
   border-radius: 5px;
   font-size: 18px;
-  ont-family: 'Turret Road', 'Shadows Into Light' !important;
+  ont-family: 'Turret Road'!important;
   width: 30%;
   text-align: center;
 }
