@@ -1,0 +1,30 @@
+.smallImages {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.smallImages span {
+	padding: .25%;
+}
+
+.imgBar{
+	max-width: 100% !important;
+}
+
+.bigDiv {
+	height: 60vh;
+	padding: 10px;
+	text-align: center;
+
+}
+
+.bigImage {
+	max-height: 100%;
+}
+
+/*.abc {
+	display: flex;
+	height: auto;
+	width: 100%;
+	justify-content: space-evenly;
+}*/
