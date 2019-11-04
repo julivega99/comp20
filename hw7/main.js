@@ -35,7 +35,7 @@ function displaySelected() {
         }
     }
 
-    var html = "<table id='third' style='width:70%'>";
+    var html = "<table id='third'>";
         html+= "<tr> <th>Song</th> <th>Artist</th> <th> Year </th></tr>"
     for (var i = 0; i < match.length; i++) {
         html+="<tr>";

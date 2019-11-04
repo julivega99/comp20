@@ -1,31 +1,86 @@
-.b {
-    font-weight: bold;
+html {
+
+    background-image: url(https://images-na.ssl-images-amazon.com/images/I/51y6dy0T8sL._SX466_.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-.i {
-    font-style: italic;
+
+h1 {
+    color: #0D00A6;
+    font-family: 'Lobster';
+    letter-spacing: 5px;
+    text-align: center;
+
 }
-section form {
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid;
+  border-color:  #819EFF;
+}
+
+#first {
+    width: 80%;
+    background-color: rgb(13, 0, 166, 0.7);
+    text-align: left;
     color: #ffff;
-    background-color: rgba(102, 252, 241, 0.5);
-    border-radius: 10px;
-    max-width: 60%;
-    height: auto;
-    width: 500px;
-    padding: 20px;
-    font-size: 1.7em;
-    line-height: 2em;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+#tableDiv {
+    width: 80%;
+    background-color: rgb(13, 0, 166, 0.7);
+    text-align: left;
+    margin: auto;
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 5px;
+    margin-top: 1em;
+    color: #ffff;
+}
+
+
+#formDiv{
+    width: 50%;
+    background-color: rgb(13, 0, 166, 0.7);
+    text-align: left;
+    margin: auto;
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 5px;
+    margin-top: 1em;
+    color: #ffff;
+    text-align: center;
+    line-height: 3em;
+    font-weight: bolder;
 
 }
 
+#extraTable {
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    border-radius: 15px;
+    font-size: 13px;
+    padding: 5px;
+    margin-top: 1em;
+    color: #ffff;
+}
+
+#extraTable table {
+    background-color: rgb(13, 0, 166, 0.7);
+
+}
 section form input 
 {
     display: inline-block;
-}
-
-#second {
-
-}
-
-#third {
-    border="1|1";
 }
