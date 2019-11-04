@@ -1,0 +1,31 @@
+.b {
+    font-weight: bold;
+}
+.i {
+    font-style: italic;
+}
+section form {
+    color: #ffff;
+    background-color: rgba(102, 252, 241, 0.5);
+    border-radius: 10px;
+    max-width: 60%;
+    height: auto;
+    width: 500px;
+    padding: 20px;
+    font-size: 1.7em;
+    line-height: 2em;
+
+}
+
+section form input 
+{
+    display: inline-block;
+}
+
+#second {
+
+}
+
+#third {
+    border="1|1";
+}

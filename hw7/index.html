@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	<title>Homework 7 </title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <script
+    src="https://www.w3schools.com/lib/w3.js">
+  </script>
+  <body>
+    <h1> HW Setlist </h1>
+    <p id="first"> </p>
+
+  <table id="second" style="width:100%">
+    <tr>
+      <th>Song</th>
+      <th>Artist</th>
+      <th>Genre</th>
+      <th> Year </th>
+    </tr>
+    <tr w3-repeat="Setlist">
+      <td>{{Name}}</td>
+      <td>{{Artist}}</td>
+      <td>{{Genre}}</td>
+      <td> {{Year}} </td>
+    </tr>
+  </table>
+
+  <form>
+    Select Genre:<br>
+    <select id="drop">
+      <option value="Country">Country</option>
+      <option value="Pop">Pop</option>
+      <option value="Synth Pop">Synth Pop</option>
+    </select>
+    <br>
+    <input id="submitButton" value="submit" type="button" name="submit" onclick="displaySelected()"> 
+  </form>
+
+  <div id="extraTable"> </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="main.js"></script> 
+
+  </body>
+</html>
