@@ -1,0 +1,50 @@
+body {
+	background-color: rgb(3, 13, 134, 0.1);
+	color: rgb(3, 13, 134);
+	width: 80%;
+	margin: auto;
+	font-family: 'Supermercado One';
+}
+h1 {
+    color: rgb(144, 12, 63);
+    letter-spacing: 5px;
+    text-align: center;
+    font-style: 'Supermercado One';
+
+}
+h2 {
+	color: rgb(3, 13, 134);
+}
+
+.info {
+	text-align: center;
+	width: 80%
+	margin: auto;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid;
+  border-color:  #FFFF;
+  line-height: 3em;
+  color: rgb(3, 13, 134);
+}
+
+
+#data {
+    width: 80%;
+    background-color: rgb(3, 13, 134, 0.3);
+    text-align: left;
+    margin: auto;
+   // border-radius: 15px;
+    font-size: 19px;
+    padding: 3px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    color: #ffff;
+}
