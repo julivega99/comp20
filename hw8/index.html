@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Homework 8 Apis </title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Supermercado+One&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      function getUniversities() {
+        /* Step 1: Make instance of request object...
+      ...to make HTTP request after page is loaded*/
+        request = new XMLHttpRequest();
+        console.log("1 - request object created");
+ 
+        // Step 2: Set the URL for the AJAX request to be the JSON file
+ 
+        request.open("GET", "https://cors-anywhere.herokuapp.com/http://universities.hipolabs.com/search?name=Ecuador&country=Ecuador", true);
+
+        console.log("2 - opened request file");
+   
+        // Step 3: set up event handler/callback
+
+
+        request.onreadystatechange = function() {
+          console.log("3 - readystatechange event fired.");
+   
+          if (request.readyState == 4 && request.status == 200) {
+
+            // Step 5: wait for done + success
+
+            result = request.responseText;
+            univs = JSON.parse(result);
+            
+            var html = "<table id='Universities'>";
+                html+= "<tr> <th>Name</th> <th>Website</th> </tr>"
+            
+            for (var i = 0; i < univs.length; i++) {
+                html+="<tr>";
+                html+="<td>"+univs[i].name+"</td>";
+                html+="<td>"+univs[i].domains[0]+"</td>";
+                html+="</tr>";
+            }
+
+            html+="</table>";
+            document.getElementById("data").innerHTML = html;
+            
+          }
+          else if (request.readyState == 4 && request.status != 200) {
+
+            document.getElementById("data").innerHTML = "Something is wrong!  Check the logs to see where this went off the rails";
+
+          }
+
+          else if (request.readyState == 3) {
+
+            document.getElementById("data").innerHTML = "Too soon!  Try again";
+
+          }
+
+        }
+        // Step 4: fire off the HTTP request
+        request.send();
+        console.log("4 - Request sent");
+      }
+        
+    </script>
+  </head>
+
+  <body onload ="getUniversities()">
+
+    <h1> Universities in Ecuador with "Ecuador" in Their Name </h1>
+    <h2> The API Selected is - </h2>
+    <div class="info"> 
+          A Universities domain list that has the university name, 
+          the country where the university is located, the Alpha-Two-Code,
+          the province, and the website domains the university has.  
+    </div>
+    <h2> Website Retrieved From - </h2>
+    <div class="info"> 
+          https://github.com/Hipo/university-domains-list
+          http://universities.hipolabs.com 
+    </div>
+    <h2> Options Used for API Request - </h2>
+    <div class="info"> 
+      <ul>
+           Country: Ecuador </br>
+           Name: Ecuador
+      </ul>
+    </div>
+    <h2> Applications where it would be helpful: </h2>
+    <div class="info"> 
+          
+            > When someone is trying to find colleges in a certain state or country.
+                 this can be used for people who are trying to go abroad, they get the websites
+                 for colleges they might consider and can conduct further research </br>
+            > This can also be used for people who want to conduct research. They get
+                 a density of the colleges around a certain area
+           
+    </div>
+    <div id="data"> </div>
+  </body>
+</html>
